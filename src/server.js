@@ -1,15 +1,8 @@
-// const mysql = require("mysql");
 const express = require("express");
 const app = express();
 const bodyparser = require("body-parser");
 const conn = require("./conn");
 app.use(bodyparser.urlencoded({ extended: true })); 
-// const conn = mysql.createConnection({
-//     host: "localhost",
-//     user: "root",
-//     pass: "",
-//     database: "hello_data"
-// });
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/form.html");
 });
